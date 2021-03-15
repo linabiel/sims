@@ -19,3 +19,9 @@ class TestHousehold(unittest.TestCase):
     def test_can_add_player(self):
         self.household.add_player(self.player)
         self.assertEqual([self.player, self.player1, self.player], self.household.players)
+
+    def test_can_change_house(self):
+        self.assertEqual("Meadows", self.household.house)
+        self.household.change_house("Brunsfield")
+        self.assertEqual("Brunsfield", self.household.house)
+        print(self.household.house)

@@ -1,5 +1,5 @@
-from src.household.FurnitureType import FurnitureType
-from src.player.ActionType import Action
+from src.enums.FurnitureType import FurnitureType
+from src.enums.ActionType import ActionType
 
 
 class Furniture:
@@ -17,17 +17,16 @@ class Furniture:
 
     def get_actions(self):
         if self.furniture_type == FurnitureType.BED:
-            return [Action.SLEEP, Action.HAVE_SEX, Action.NAP, Action.SIT, Action.TALK, Action.CUDDLE]
+            return [ActionType.SLEEP, ActionType.HAVE_SEX, ActionType.NAP, ActionType.SIT, ActionType.TALK, ActionType.CUDDLE]
         if self.furniture_type == FurnitureType.SOFA:
-            return [Action.SLEEP, Action.NAP, Action.HAVE_SEX, Action.SIT, Action.ADMIRE, Action.CUDDLE]
+            return [ActionType.SLEEP, ActionType.NAP, ActionType.HAVE_SEX, ActionType.SIT, ActionType.ADMIRE, ActionType.CUDDLE]
         if self.furniture_type == FurnitureType.TV:
-            return [Action.WATCH_TV, Action.TALK, Action.ADMIRE]
+            return [ActionType.WATCH_TV, ActionType.TALK, ActionType.ADMIRE]
         if self.furniture_type == FurnitureType.COOKER:
-            return [Action.COOK]
+            return [ActionType.COOK]
         if self.furniture_type == FurnitureType.FRIDGE:
-            return [Action.EAT]
+            return [ActionType.EAT]
         if self.furniture_type == FurnitureType.TOILET:
-            return [Action.POO, Action.WEE]
+            return [ActionType.POO, ActionType.WEE]
         if self.furniture_type == FurnitureType.PAINTING:
-            return [Action.ADMIRE]
-
+            return [ActionType.ADMIRE]

@@ -1,7 +1,7 @@
 from enum import Enum
 
 
-class Action(Enum):
+class ActionType(Enum):
     SLEEP = 1
     HAVE_SEX = 2
     NAP = 3

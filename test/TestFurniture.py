@@ -1,8 +1,8 @@
 import unittest
 
 from src.household.Furniture import Furniture
-from src.household.FurnitureType import FurnitureType
-from src.player.ActionType import Action
+from src.enums.FurnitureType import FurnitureType
+from src.enums.ActionType import ActionType
 
 
 class TestFurniture(unittest.TestCase):
@@ -16,29 +16,29 @@ class TestFurniture(unittest.TestCase):
         self.tv = Furniture(FurnitureType.TV, "Tv", 6, 7, 5, 0, 5, 0, 565, [2, 4])
 
     def test_get_furniture_action_list(self):
-        self.assertEqual([Action.SLEEP, Action.HAVE_SEX, Action.NAP, Action.SIT, Action.TALK, Action.CUDDLE],
+        self.assertEqual([ActionType.SLEEP, ActionType.HAVE_SEX, ActionType.NAP, ActionType.SIT, ActionType.TALK, ActionType.CUDDLE],
                          self.bed.get_actions())
 
     def test_get_furniture_action_list1(self):
-        self.assertEqual([Action.SLEEP, Action.NAP, Action.HAVE_SEX, Action.SIT, Action.ADMIRE, Action.CUDDLE],
+        self.assertEqual([ActionType.SLEEP, ActionType.NAP, ActionType.HAVE_SEX, ActionType.SIT, ActionType.ADMIRE, ActionType.CUDDLE],
                          self.sofa.get_actions())
 
     def test_get_furniture_action_list2(self):
-        self.assertEqual([Action.WATCH_TV, Action.TALK, Action.ADMIRE],
+        self.assertEqual([ActionType.WATCH_TV, ActionType.TALK, ActionType.ADMIRE],
                          self.tv.get_actions())
 
     def test_get_furniture_action_list3(self):
-        self.assertEqual([Action.COOK],
+        self.assertEqual([ActionType.COOK],
                          self.cooker.get_actions())
 
     def test_get_furniture_action_list4(self):
-        self.assertEqual([Action.EAT],
+        self.assertEqual([ActionType.EAT],
                          self.fridge.get_actions())
 
     def test_get_furniture_action_list5(self):
-        self.assertEqual([Action.POO, Action.WEE],
+        self.assertEqual([ActionType.POO, ActionType.WEE],
                          self.toilet.get_actions())
 
     def test_get_furniture_action_list6(self):
-        self.assertEqual([Action.ADMIRE],
+        self.assertEqual([ActionType.ADMIRE],
                          self.painting.get_actions())

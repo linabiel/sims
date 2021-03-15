@@ -14,7 +14,7 @@ class Household:
     def add_all_household_members_money(self):
         self.combined_money = self.household_money
         for player in self.players:
-            self.combined_money += player.combined_money
+            self.combined_money += player.money
 
     def remove_players_money_from_household(self, money):
         self.combined_money -= money
@@ -26,3 +26,5 @@ class Household:
     def remove_player(self, player):
         self.players.remove(player)
 
+    def change_house(self, house):
+        self.house = house

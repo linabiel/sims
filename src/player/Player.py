@@ -1,6 +1,11 @@
+from src.player.Actions import Actions
+
+
 class Player:
-    def __init__(self, name, surname, age, job, social, hunger, bladder, energy, fun, hygiene, environment, money):
+    def __init__(self, name, surname, age, job, social=80, hunger=80, bladder=80,
+                 energy=80, fun=80, hygiene=80, environment=80, money=0, relationships=0):
         self.name = name
+        self.surname = surname
         self.age = age
         self.job = job
         self.social = social
@@ -11,7 +16,8 @@ class Player:
         self.hygiene = hygiene
         self.environment = environment
         self.money = money
-        self.surname = surname
+        self.actions = Actions(self)
+        self.relationships = relationships
 
     def change_surname(self, surname):
         self.surname = surname
