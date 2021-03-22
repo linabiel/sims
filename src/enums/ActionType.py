@@ -14,4 +14,4 @@ class ActionType(Enum):
     CUDDLE = 9
     TALK = 10
     ADMIRE = 11
-    COOK = 12
+

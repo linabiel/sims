@@ -1,6 +1,6 @@
 import unittest
 
-from src.household.Furniture import Furniture
+from src.holdhold.Furniture import Furniture
 from src.enums.FurnitureType import FurnitureType
 from src.enums.ActionType import ActionType
 

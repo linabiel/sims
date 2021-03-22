@@ -1,14 +1,14 @@
 import unittest
 
-from src.household.House import House
+from src.holdhold.House import House
 from src.player.Player import Player
 
 
 class TestHouse(unittest.TestCase):
     def setUp(self):
-        self.lina = Player("Lina", "Biel", 27, "Critic")
-        self.rob = Player("Rob", "Hollingworth", 27, "Software Engineer")
-        self.bob = Player("Bob", "Hollingworth", 27, "Bum")
+        self.lina = Player("Lina", "Biel", 27, "Critic", "Marchmont")
+        self.rob = Player("Rob", "Hollingworth", 27, "Software Engineer", "Meadows")
+        self.bob = Player("Bob", "Hollingworth", 27, "Bum", "Fountainbridge")
         self.house = House(["Living Room"], [self.lina, self.rob], "6, 4")
 
     def test_can_add_room(self):
@@ -33,4 +33,4 @@ class TestHouse(unittest.TestCase):
 
     def test_can_change_plot_size(self):
         self.house.change_plot_size_size(3, 2)
-        self.assertEqual([3, 2], (self.house.plot_size))
+        self.assertEqual([3, 2], self.house.plot_size)

@@ -15,4 +15,3 @@ class Relationship:
             self.relationship_strength = 0
         else:
             self.relationship_strength -= amount
-

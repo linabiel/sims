@@ -1,7 +1,5 @@
 from enum import Enum
 
-import GIRLFRIEND as GIRLFRIEND
-
 
 class RelationshipType(Enum):
     BROTHER = 0

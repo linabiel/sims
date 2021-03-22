@@ -1,6 +1,6 @@
 import unittest
 from src.player.Player import Player
-from src.household.Household import Household
+from src.holdhold.Household import Household
 
 
 class TestHousehold(unittest.TestCase):
